@@ -106,12 +106,17 @@ specs/
       components/
         <Name>.tsx             # Component wrappers or implementations
 
+cmd/stml/main.go              # CLI entry point
+parser/                       # HTML → PageSpec
+validator/                    # OpenAPI cross-validation
+generator/                    # PageSpec → framework code (Target interface)
+  target.go                   #   Target interface + DefaultTarget()
+  react_target.go             #   ReactTarget implementation
+  react_imports.go            #   React import analysis
+  react_templates.go          #   React JSX templates
+  generator.go                #   Common types + delegation wrappers
+
 artifacts/
-  cmd/stml/main.go            # CLI entry point
-  internal/
-    parser/                   # HTML → PageSpec
-    validator/                # OpenAPI cross-validation
-    generator/                # PageSpec → React TSX
   <project>/
     frontend/
       <page-name>.tsx         # Generated output (do not edit)

@@ -132,7 +132,7 @@ artifacts/<project>/
 ## Install
 
 ```bash
-go install github.com/geul-org/stml/artifacts/cmd/stml@latest
+go install github.com/geul-org/stml/cmd/stml@latest
 ```
 
 ## Documentation

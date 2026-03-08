@@ -9,7 +9,7 @@ STML(SSOT Template Markup Language)은 HTML5 `data-*` 속성으로 프론트엔�
 ## 설치 및 실행
 
 ```bash
-go install github.com/geul-org/stml/artifacts/cmd/stml@latest
+go install github.com/geul-org/stml/cmd/stml@latest
 ```
 
 ### CLI 명령어
