@@ -1,0 +1,27 @@
+# Binaries
+/stml
+*.exe
+
+# Go
+go.sum
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated service code (codegen output)
+artifacts/backend/internal/service/
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Clari
+.clari/
