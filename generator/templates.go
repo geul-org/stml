@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/geul-org/stml/artifacts/internal/parser"
+	"github.com/geul-org/stml/parser"
 )
 
 // renderUseQuery generates a useQuery hook call.

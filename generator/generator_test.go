@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/geul-org/stml/artifacts/internal/parser"
+	"github.com/geul-org/stml/parser"
 )
 
 func TestGenerateLoginPage(t *testing.T) {

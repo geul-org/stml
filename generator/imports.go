@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/geul-org/stml/artifacts/internal/parser"
+	"github.com/geul-org/stml/parser"
 )
 
 // importSet collects unique imports for a page.
