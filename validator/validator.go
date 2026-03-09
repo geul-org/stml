@@ -124,13 +124,6 @@ func validateInfraParams(f parser.FetchBlock, file string, api APISymbol) []Vali
 		}
 	}
 
-	// data-include resources must be in x-include.allowed
-	for _, res := range f.Includes {
-		if api.Include == nil || !containsStr(api.Include.Allowed, res) {
-			errs = append(errs, errIncludeNotAllowed(file, f.OperationID, res))
-		}
-	}
-
 	return errs
 }
 

@@ -19,7 +19,7 @@ func renderUseQuery(f parser.FetchBlock) string {
 	if paramValues != "" {
 		queryKey += ", " + paramValues
 	}
-	// Phase 5: include infra params in queryKey
+	// Phase 5: infra params in queryKey
 	if f.Paginate {
 		queryKey += ", page, limit"
 	}
@@ -31,7 +31,7 @@ func renderUseQuery(f parser.FetchBlock) string {
 	}
 
 	// API call args
-	hasInfra := f.Paginate || f.Sort != nil || len(f.Filters) > 0 || len(f.Includes) > 0
+	hasInfra := f.Paginate || f.Sort != nil || len(f.Filters) > 0
 	apiArgs := paramArgs
 	if hasInfra {
 		apiArgs = renderInfraApiArgs(f, paramArgs)
@@ -64,9 +64,6 @@ func renderInfraApiArgs(f parser.FetchBlock, paramArgs string) string {
 	}
 	if len(f.Filters) > 0 {
 		parts = append(parts, "...filters")
-	}
-	if len(f.Includes) > 0 {
-		parts = append(parts, fmt.Sprintf("include: '%s'", strings.Join(f.Includes, ",")))
 	}
 
 	return "{ " + strings.Join(parts, ", ") + " }"

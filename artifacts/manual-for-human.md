@@ -202,7 +202,6 @@ OpenAPI에 x- 확장이 선언된 목록 엔드포인트에 사용합니다.
 - `data-paginate` → `useState(page, limit)` + 이전/다음 버튼
 - `data-sort` → `useState(sortBy, sortDir)` + 정렬 토글 버튼
 - `data-filter` → `useState(filters)` + 필터 입력 UI
-- `data-include` → API 호출 시 include 파라미터 전달
 
 ## 프론트엔드 계산: custom.ts
 
@@ -222,7 +221,7 @@ export function totalPrice(items) {
 
 ## 검증
 
-`stml validate`는 12가지 교차 검증을 실행합니다:
+`stml validate`는 11가지 교차 검증을 실행합니다:
 
 - operationId가 OpenAPI에 존재하는가
 - HTTP 메서드가 올바른가 (fetch=GET, action=POST/PUT/DELETE)

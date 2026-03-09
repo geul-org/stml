@@ -159,7 +159,7 @@ func TestGenerateWithInfraParams(t *testing.T) {
            data-paginate
            data-sort="name:desc"
            data-filter="status,category"
-           data-include="author">
+>
     <ul data-each="items">
       <li><span data-bind="name"></span></li>
     </ul>
@@ -182,9 +182,6 @@ func TestGenerateWithInfraParams(t *testing.T) {
 	assertContains(t, code, "page, limit")
 	assertContains(t, code, "sortBy, sortDir")
 	assertContains(t, code, "filters")
-
-	// API call includes infra params
-	assertContains(t, code, "include: 'author'")
 
 	// Filter UI
 	assertContains(t, code, `placeholder="status"`)

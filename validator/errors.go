@@ -56,7 +56,3 @@ func errSortNotAllowed(file, op, col string) ValidationError {
 func errFilterNotAllowed(file, op, col string) ValidationError {
 	return ValidationError{file, fmt.Sprintf("data-filter=%q", col), fmt.Sprintf("%q의 x-filter.allowed에 %q가 없습니다", op, col)}
 }
-
-func errIncludeNotAllowed(file, op, res string) ValidationError {
-	return ValidationError{file, fmt.Sprintf("data-include=%q", res), fmt.Sprintf("%q의 x-include.allowed에 %q가 없습니다", op, res)}
-}

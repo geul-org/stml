@@ -366,7 +366,6 @@ func TestPhase5_InfraParams(t *testing.T) {
            data-paginate
            data-sort="StartAt:desc"
            data-filter="Status,RoomID"
-           data-include="room,user">
     <ul data-each="reservations">
       <li><span data-bind="RoomID"></span></li>
     </ul>
@@ -404,13 +403,6 @@ func TestPhase5_InfraParams(t *testing.T) {
 		t.Errorf("Filters = %v, want [Status RoomID]", fetch.Filters)
 	}
 
-	// data-include
-	if len(fetch.Includes) != 2 {
-		t.Fatalf("Includes = %d, want 2", len(fetch.Includes))
-	}
-	if fetch.Includes[0] != "room" || fetch.Includes[1] != "user" {
-		t.Errorf("Includes = %v, want [room user]", fetch.Includes)
-	}
 }
 
 func TestPhase5_SortDefaultDirection(t *testing.T) {
@@ -451,9 +443,6 @@ func TestPhase5_NoInfraParams(t *testing.T) {
 	}
 	if len(fetch.Filters) != 0 {
 		t.Errorf("Filters = %d, want 0", len(fetch.Filters))
-	}
-	if len(fetch.Includes) != 0 {
-		t.Errorf("Includes = %d, want 0", len(fetch.Includes))
 	}
 }
 

@@ -123,10 +123,6 @@ func parseFetchBlock(n *html.Node, operationID string) FetchBlock {
 	if v := getAttr(n, "data-filter"); v != "" {
 		fb.Filters = splitTrim(v)
 	}
-	if v := getAttr(n, "data-include"); v != "" {
-		fb.Includes = splitTrim(v)
-	}
-
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
 		walkFetchChildren(c, &fb)
 	}

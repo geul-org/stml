@@ -345,8 +345,6 @@ paths:
         direction: asc
       x-filter:
         allowed: [status, category]
-      x-include:
-        allowed: [author, tags]
       responses:
         "200":
           description: ok
@@ -388,7 +386,6 @@ func TestValidateInfraParamsPass(t *testing.T) {
 			Paginate:    true,
 			Sort:        &parser.SortDecl{Column: "name", Direction: "desc"},
 			Filters:     []string{"status"},
-			Includes:    []string{"author"},
 			Eaches:      []parser.EachBlock{{Field: "items"}},
 		}},
 	}}
@@ -449,23 +446,6 @@ func TestValidateFilterNotAllowed(t *testing.T) {
 	errs := Validate(pages, root)
 	assertHasError(t, errs, "x-filter.allowed")
 	assertHasError(t, errs, "bad_col")
-}
-
-func TestValidateIncludeNotAllowed(t *testing.T) {
-	root := setupTestProject(t, infraOpenAPI, nil, nil)
-
-	pages := []parser.PageSpec{{
-		Name: "test-page", FileName: "test-page.html",
-		Fetches: []parser.FetchBlock{{
-			OperationID: "ListItems",
-			Includes:    []string{"author", "bad_rel"},
-			Eaches:      []parser.EachBlock{{Field: "items"}},
-		}},
-	}}
-
-	errs := Validate(pages, root)
-	assertHasError(t, errs, "x-include.allowed")
-	assertHasError(t, errs, "bad_rel")
 }
 
 func TestValidateSortNoExtOnEndpoint(t *testing.T) {

@@ -26,7 +26,6 @@ type APISymbol struct {
 	Pagination *PaginationExt
 	Sort       *SortExt
 	Filter     *FilterExt
-	Include    *IncludeExt
 }
 
 // PaginationExt represents x-pagination extension.
@@ -45,11 +44,6 @@ type SortExt struct {
 
 // FilterExt represents x-filter extension.
 type FilterExt struct {
-	Allowed []string
-}
-
-// IncludeExt represents x-include extension.
-type IncludeExt struct {
 	Allowed []string
 }
 
@@ -153,10 +147,6 @@ func LoadOpenAPI(path string) (*SymbolTable, error) {
 			if op.XFilter != nil {
 				api.Filter = &FilterExt{Allowed: op.XFilter.Allowed}
 			}
-			if op.XInclude != nil {
-				api.Include = &IncludeExt{Allowed: op.XInclude.Allowed}
-			}
-
 			st.Operations[op.OperationID] = api
 		}
 	}
@@ -203,7 +193,6 @@ type openAPIOperation struct {
 	XPagination  *yamlPaginationExt           `yaml:"x-pagination"`
 	XSort        *yamlSortExt                 `yaml:"x-sort"`
 	XFilter      *yamlFilterExt               `yaml:"x-filter"`
-	XInclude     *yamlIncludeExt              `yaml:"x-include"`
 }
 
 type yamlPaginationExt struct {
@@ -219,10 +208,6 @@ type yamlSortExt struct {
 }
 
 type yamlFilterExt struct {
-	Allowed []string `yaml:"allowed"`
-}
-
-type yamlIncludeExt struct {
 	Allowed []string `yaml:"allowed"`
 }
 

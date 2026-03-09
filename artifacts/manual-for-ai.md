@@ -34,7 +34,6 @@ specs/frontend/*.html  →  stml parse  →  PageSpec (JSON)
 | `data-paginate` | Enable pagination UI | (boolean, no value) | `x-pagination` on OpenAPI operation |
 | `data-sort` | Default sort column + direction | `column` or `column:desc` | `x-sort` on OpenAPI operation |
 | `data-filter` | Filter input columns | Comma-separated column names | `x-filter` on OpenAPI operation |
-| `data-include` | Include related resources | Comma-separated resource names | `x-include` on OpenAPI operation |
 
 ## Codegen Mapping
 
@@ -53,7 +52,6 @@ specs/frontend/*.html  →  stml parse  →  PageSpec (JSON)
 | `data-paginate` | `useState(page, limit)` + prev/next buttons |
 | `data-sort="col:dir"` | `useState(sortBy, sortDir)` + toggle button |
 | `data-filter="a,b"` | `useState(filters)` + filter inputs |
-| `data-include="rel"` | `include: 'rel'` in API call args |
 
 ## Preserved in Codegen
 
@@ -79,7 +77,6 @@ specs/frontend/*.html  →  stml parse  →  PageSpec (JSON)
 | 9 | Pagination ext exists | data-paginate but no x-pagination on endpoint |
 | 10 | Sort column allowed | data-sort column not in x-sort.allowed |
 | 11 | Filter column allowed | data-filter column not in x-filter.allowed |
-| 12 | Include resource allowed | data-include resource not in x-include.allowed |
 
 ## CLI Usage
 

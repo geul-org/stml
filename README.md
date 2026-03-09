@@ -84,7 +84,7 @@ The built-in validator cross-checks STML against OpenAPI — before any code is 
 This catches frontend-API mismatches at CI time, not at runtime.
 
 ```bash
-stml validate specs/my-project    # 12 symbolic checks against OpenAPI
+stml validate specs/my-project    # 11 symbolic checks against OpenAPI
 ```
 
 ## Built-in Codegen (React PoC)
@@ -114,7 +114,6 @@ This is one possible output. STML is the source of truth, not the generated code
 | `data-paginate` | This list is paginated |
 | `data-sort` | This list is sortable (default column and direction) |
 | `data-filter` | This list is filterable (which columns) |
-| `data-include` | This query includes related resources |
 
 ## Project Structure
 

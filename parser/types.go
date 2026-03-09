@@ -26,7 +26,6 @@ type FetchBlock struct {
 	Paginate bool       // data-paginate present
 	Sort     *SortDecl  // data-sort parsed result
 	Filters  []string   // data-filter comma-separated columns
-	Includes []string   // data-include comma-separated resources
 }
 
 // SortDecl represents a parsed data-sort value.
