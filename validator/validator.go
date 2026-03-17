@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/geul-org/stml/parser"
+	"github.com/park-jun-woo/stml/parser"
 )
 
 // Validate checks parsed PageSpecs against an OpenAPI spec and custom.ts files.

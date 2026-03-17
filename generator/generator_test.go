@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/geul-org/stml/parser"
+	"github.com/park-jun-woo/stml/parser"
 )
 
 func TestGenerateLoginPage(t *testing.T) {
@@ -169,7 +169,7 @@ func TestGenerateWithInfraParams(t *testing.T) {
 	code := GeneratePage(page, "")
 
 	// useState import
-	assertContains(t, code, "import React, { useState } from 'react'")
+	assertContains(t, code, "import { useState } from 'react'")
 
 	// useState hooks
 	assertContains(t, code, "const [page, setPage] = useState(1)")

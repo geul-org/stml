@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/geul-org/stml/parser"
+	"github.com/park-jun-woo/stml/parser"
 )
 
 // setupTestProject creates a temporary project with openapi.yaml and optional files.

@@ -1,6 +1,6 @@
 package generator
 
-import "github.com/geul-org/stml/parser"
+import "github.com/park-jun-woo/stml/parser"
 
 // Target abstracts the code generation backend.
 // Implement this interface to support a new framework (e.g. Vue, Svelte).

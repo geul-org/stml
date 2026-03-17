@@ -6,9 +6,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/geul-org/stml/generator"
-	"github.com/geul-org/stml/parser"
-	"github.com/geul-org/stml/validator"
+	"github.com/park-jun-woo/stml/generator"
+	"github.com/park-jun-woo/stml/parser"
+	"github.com/park-jun-woo/stml/validator"
 )
 
 func main() {

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/geul-org/stml/parser"
+	"github.com/park-jun-woo/stml/parser"
 )
 
 // ReactTarget generates React TSX components.

@@ -27,14 +27,14 @@ generator/
 
 ```
 변경 전:
-github.com/geul-org/stml/artifacts/internal/parser
-github.com/geul-org/stml/artifacts/internal/validator
-github.com/geul-org/stml/artifacts/internal/generator
+github.com/park-jun-woo/stml/artifacts/internal/parser
+github.com/park-jun-woo/stml/artifacts/internal/validator
+github.com/park-jun-woo/stml/artifacts/internal/generator
 
 변경 후:
-github.com/geul-org/stml/parser
-github.com/geul-org/stml/validator
-github.com/geul-org/stml/generator
+github.com/park-jun-woo/stml/parser
+github.com/park-jun-woo/stml/validator
+github.com/park-jun-woo/stml/generator
 ```
 
 ### 수정 대상 파일
@@ -106,5 +106,5 @@ stml/
 ## 주의사항
 
 - `artifacts/` 디렉토리에는 test fixtures와 manual 문서만 남긴다
-- `go.mod`의 module path `github.com/geul-org/stml`은 변경하지 않는다
+- `go.mod`의 module path `github.com/park-jun-woo/stml`은 변경하지 않는다
 - 빈 `artifacts/internal/` 디렉토리는 삭제한다

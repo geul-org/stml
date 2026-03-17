@@ -1,4 +1,4 @@
-module github.com/geul-org/stml
+module github.com/park-jun-woo/stml
 
 go 1.25.0
 

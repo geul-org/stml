@@ -1,6 +1,6 @@
 # STML
 
-> **This project is now managed in the [fullend](https://github.com/geul-org/fullend) repository.**
+> **This project is now managed in the [fullend](https://github.com/park-jun-woo/fullend) repository.**
 > Please use the fullend repository for new issues, PRs, and development.
 
 **SSOT Template Markup Language** — a framework-independent declaration of what your frontend pages show and do.
@@ -134,7 +134,7 @@ artifacts/<project>/
 ## Install
 
 ```bash
-go install github.com/geul-org/stml/cmd/stml@latest
+go install github.com/park-jun-woo/stml/cmd/stml@latest
 ```
 
 ## Documentation

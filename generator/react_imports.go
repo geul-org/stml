@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/geul-org/stml/parser"
+	"github.com/park-jun-woo/stml/parser"
 )
 
 // importSet collects unique imports for a page.
@@ -98,9 +98,7 @@ func renderImports(is importSet, opt GenerateOptions) string {
 		lines = append(lines, "'use client'\n")
 	}
 	if is.useState {
-		lines = append(lines, "import React, { useState } from 'react'")
-	} else {
-		lines = append(lines, "import React from 'react'")
+		lines = append(lines, "import { useState } from 'react'")
 	}
 
 	// tanstack query

@@ -111,7 +111,7 @@ type ComponentRef struct {
 
 ### 1. 프로젝트 초기화
 
-- `go mod init github.com/geul-org/stml`
+- `go mod init github.com/park-jun-woo/stml`
 - 디렉토리 구조:
   ```
   artifacts/
